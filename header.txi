@@ -1,0 +1,99 @@
+
+% Number domains
+% 
+% \documentclass[10pt]{article}
+\documentclass[parskip=full]{scrartcl}
+
+\usepackage{listings}
+
+% http://tex.stackexchange.com/questions/21188/reduce-linespread-between-item-globally?rq=1
+\usepackage{enumitem}
+\setlist[1]{itemsep=3pt}
+\setlist{nolistsep}
+
+
+\usepackage[margin=1in]{geometry}  % 1 in margin all around
+\usepackage{amsmath,amssymb,textcomp}
+\usepackage[pdftex]{graphicx}
+\usepackage[pdftex]{graphicx}
+
+% \usepackage[dvips]{graphicx}
+\DeclareGraphicsExtensions{.jpg,.png,.pdf}
+% \setlengh{\parskip}{3mm}
+% {\baselineskip}
+% \setlengh{\parindent}{0pt}%
+%
+% to change the size within math environment try the following:
+% \DeclareMathSizes{surrounding text size}{math text size}{maths script size}{math scriptscript size}
+% \DeclareMathSizes{10}{10}{10}{10}
+\DeclareMathSizes{14}{14}{14}{14}
+%
+% to set the desired style, and font size one can use: 
+% \displastyle, \textstyle, \scriptstyle, \scriptscriptstyle.
+
+\begin{document}
+% The std type sizes in Latex are:
+%  tiny, scriptsize, footnotesize, small, normalsize, large, Large, LARGE, huge, Huge
+% $$\mbox{\Huge $ 3x+3=\mu$ } $$
+
+% \newcommand{\argmax}[1]{\underset{#1}{\operatorname{argmax}}}
+\newcommand{\argmax}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{max}}\;}
+\newcommand{\argmmin}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{min}}\;}
+\newcommand{\maxim}[1]{\displaystyle \max_{#1}}
+\newcommand{\minim}[1]{\displaystyle \min_{#1}}
+
+\newcommand{\bld}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\bls}[1]{\mbox{\Large $#1$}}
+%
+\newcommand{\Int}{\ensuremath{\mathbb{Z}}}
+\newcommand{\IntPlus}{\ensuremath{\mathbb{Z}^+}}
+\newcommand{\Real}{\ensuremath{\mathbb{R}}}
+\newcommand{\Rat}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Nat}{\ensuremath{\mathbb{N}}}
+\newcommand{\floor}[1]{\ensuremath{\lfloor #1 \rfloor}}
+\newcommand{\ceil}[1]{\ensuremath{\lceil #1 \rceil}}
+\newcommand{\tab}{\hspace*{2em}}
+\newcommand{\contra}{{\Large \textreferencemark}}
+\newcommand{\aweek}[1]{{\addvspace{10mm} \Large {\bf WEEK #1:}}} 
+\newcommand{\aday}[1]{{\addvspace{5mm} {\large {\bf #1.pdf:}}}}
+\newcommand{\topic}[1]{{\addvspace{5mm} \large {\bf TOPIC: #1:}}}
+\newcommand{\note}[1]{{\addvspace{5mm} \large {\bf Note: #1}}}
+\newcommand{\problem}[2]{{\addvspace{5mm} \large {\bf Problem #1: #2}}}
+\newcommand{\example}[2]{{\addvspace{5mm} \large {\bf Example #1: #2}}}
+\newcommand{\solution}[1]{\addvspace{5mm} \large {\bf Solution #1} }
+\newcommand{\thetitle}[1]{{\addvspace{5mm} \large {\bf #1}}}
+\newcommand{\subtopic}[1]{{\addvspace{5mm} \large {\bf SUBTOPIC: #1:}}}
+\newcommand{\espace}{\vspace{20em}}
+\def\mathlarge#1{\mbox{\LARGE $#1$}}
+\newcommand{\limtoinf}[3]{\ensuremath{\displaystyle \lim_{#1\to\infty}\frac{#2(n)}{#3(n)}}}
+\newcommand{\limtozero}[3]{\ensuremath{\displaystyle \lim_{#1\to0}\frac{#2(n)}{#3(n)}}}
+\newcommand{\limto}[4]{\ensuremath{\displaystyle \lim_{#1\to#2}\frac{#3(n)}{#4(n)}}}
+\newcommand{\derivone}[1]{\ensuremath{\displaystyle {\dfrac{d}{d#1}}}}
+\newcommand{\derivtwo}[2]{\ensuremath{\displaystyle {\dfrac{d#2}{d#1}}}}
+\newcommand{\notimplies}{\ensuremath{\centernot\implies}}
+\newcommand{\sumit}[2]{\ensuremath{\displaystyle \sum_{#1}^{#2}}} 
+\newcommand{\opt}{\ensuremath{\text{ OPT}}}
+\newcommand{\sect}[1]{{\bf \large #1}}
+% \begin{large}
+% \newcommand{\bf}[1]{\textbf{#1}}
+\raggedright
+% In math environment:
+% \; for a thick space,
+% \: for a medium space,
+% \, for a thin space,
+% \! for a negative thin space,
+
+% parameter changes for listing package.
+\lstset{
+  language=Python,
+  showstringspaces=false,
+  formfeed=\newpage,
+  tabsize=4,
+  commentstyle=\itshape,
+  basicstyle=\ttfamily,
+  morekeywords={models, lambda, forms},
+  numbers=left,
+  firstnumber=1,
+  numberfirstline=false
+}
+
